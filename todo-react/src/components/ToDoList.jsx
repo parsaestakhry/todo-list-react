@@ -25,10 +25,22 @@ export const ToDoList = () => {
   };
 
   const moveTaskUp = (index) => {
-
+    if (index > 0) {
+        const updatedTasks = [...tasks]
+        [updatedTasks[index], updatedTasks[index - 1]] = 
+        [updatedTasksp[index - 1], updatedTasks[index]]
+        setTasks(updatedTasks)
+    }
   };
 
-  const moveTaskDown = (index) => {};
+  const moveTaskDown = (index) => {
+    if (index < 0) {
+      const updatedTasks = ([...tasks][
+        (updatedTasks[index], updatedTasks[index + 1])
+      ] = [updatedTasksp[index + 1], updatedTasks[index]]);
+      setTasks(updatedTasks);
+    }
+  };
 
   return (
     <>
