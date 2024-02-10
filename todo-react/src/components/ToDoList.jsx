@@ -13,7 +13,11 @@ export const ToDoList = () => {
   };
 
   const addTask = () => {
-    setTasks([...tasks, newTask])
+    if (newTask.trim() !== "") {
+        setTasks((t) => [...tasks, newTask]);
+        setNewTask("");
+    }
+    
   };
 
   const removeTask = (index) => {
@@ -21,7 +25,7 @@ export const ToDoList = () => {
   };
 
   const moveTaskUp = (index) => {
-    
+
   };
 
   const moveTaskDown = (index) => {};
