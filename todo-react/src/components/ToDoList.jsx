@@ -20,7 +20,9 @@ export const ToDoList = () => {
     setTasks(tasks.filter((_, i) => i !== index));
   };
 
-  const moveTaskUp = (index) => {};
+  const moveTaskUp = (index) => {
+    
+  };
 
   const moveTaskDown = (index) => {};
 
